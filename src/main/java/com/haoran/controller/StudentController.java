@@ -24,4 +24,15 @@ public class StudentController {
         model.addAttribute("students", students);
         return "listStudent";
     }
+
+    @RequestMapping("/saveStudent")
+    public void save() {
+        studentMapper.save("345", "lihaoran", 77);
+    }
+
+    @RequestMapping("/findByName")
+    public Student findByName(String name) {
+        //如果不配置页面会转到/WEB-INF/views/findByName.jsp
+        return studentMapper.findByName(name);
+    }
 }

@@ -30,6 +30,12 @@
             <scope>test</scope>
         </dependency>
 
+        <!--支持thymeleaf-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
         <!-- servlet依赖. -->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -47,6 +53,7 @@
             <artifactId>tomcat-embed-jasper</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!-- 上面两个是用来支持JSP的-->
 
         <!-- mybatis -->
         <dependency>
