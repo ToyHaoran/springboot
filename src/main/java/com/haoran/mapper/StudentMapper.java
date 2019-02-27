@@ -14,7 +14,7 @@ public interface StudentMapper {
     @Select("SELECT * FROM student")
     List<Student> findAll();
 
-    @Select("SELECT * FROM student WHERE NAME = #{name}")
+    @Select("SELECT * FROM student WHERE name = #{name}")
     Student findByName(@Param("name") String name);
 
     @Insert("INSERT INTO student(id,name,grade) VALUES(#{id},#{name},#{grade})")
