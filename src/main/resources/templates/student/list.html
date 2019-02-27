@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta charset="UTF-8"/>
+    <title>用户信息</title>
+</head>
+<body>
+
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>姓名</th>
+        <th>分数</th>
+    </tr>
+    <!--为什么报错？？，但是能运行-->
+    <tr th:each="students:${students}">
+        <td><span th:text="${students.id}"></span></td>
+        <td><span th:text="${students.name}"></span></td>
+        <td><span th:text="${students.grade}"></span></td>
+    </tr>
+</table>
+
+</body>
+</html>
