@@ -14,11 +14,26 @@
         <th>分数</th>
     </tr>
     <!--为什么标红？但是能运行，解决方式：https://my.oschina.net/u/3854884/blog/1809280-->
-    <tr th:each="students:${students}">
-        <td><span th:text="${students.id}"></span></td>
-        <td><span th:text="${students.name}"></span></td>
-        <td><span th:text="${students.grade}"></span></td>
+    <tr th:each="stu:${students}">
+        <!--变量表达式-->
+        <td><span th:text="${stu.id}"></span></td>
+        <td><span th:text="${stu.name}"></span></td>
+        <td><span th:text="${stu.grade}"></span></td>
     </tr>
+    <tr th:each="stu:${students}" th:object="${stu}">
+        <!--选择表达式，选择父标签的值-->
+        <td><span th:text="*{id}"></span></td>
+        <td><span th:text="*{name}"></span></td>
+        <td><span th:text="*{grade}"></span></td>
+    </tr>
+    <tr>
+        <!--文字国际化表达式允许我们从一个外部文件获取区域文字信息(.properties)，用Key索引Value，还可以提供一组参数(可选)-->
+        <td><span th:text="#{NAME}"></span></td>
+        <td><span></span></td>
+    </tr>
+
+
+
 </table>
 
 </body>
