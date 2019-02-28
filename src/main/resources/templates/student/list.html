@@ -13,7 +13,7 @@
         <th>姓名</th>
         <th>分数</th>
     </tr>
-    <!--为什么报错？？，但是能运行-->
+    <!--为什么标红？但是能运行，解决方式：https://my.oschina.net/u/3854884/blog/1809280-->
     <tr th:each="students:${students}">
         <td><span th:text="${students.id}"></span></td>
         <td><span th:text="${students.name}"></span></td>

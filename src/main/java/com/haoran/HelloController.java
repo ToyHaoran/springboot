@@ -1,5 +1,6 @@
 package com.haoran;
 
+import com.haoran.pojo.Student;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,5 +15,14 @@ public class HelloController {
     @RequestMapping("/hello")
     public String hello() {
         return "Hello Spring Boot!";
+    }
+
+    @RequestMapping("/returnStudent")
+    public Student returnStudent(){
+        Student stu = new Student();
+        stu.setName("lihaoran");
+        stu.setId("987");
+        stu.setGrade(87);
+        return stu;
     }
 }
